@@ -117,5 +117,6 @@ const init = function () {
   PageNavigationView.addHandlerClick(consntrollPagiantion);
   addRecipeView.addHandlerUpload(controllAddRecipe);
   // contrillServings();
+  console.log("welcome to my page !");
 };
 init();
