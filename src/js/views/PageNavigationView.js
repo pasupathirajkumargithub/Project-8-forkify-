@@ -26,6 +26,17 @@ class PageNavigationView extends view {
 
     if (curPage === 1 && numPages > 1) {
       return `
+
+      <span class="btn--inline pagination__btn--center
+            style="
+              font-weight: 700;
+              background-color: beige;
+              font-size: 20px;
+              margin: 0px auto;
+            "
+          >
+          ${curPage} page of ${numPages}</span>
+
       <button data-goto="${
         curPage + 1
       }" class="btn--inline pagination__btn--next">
@@ -49,12 +60,26 @@ class PageNavigationView extends view {
             </svg>
             <span> Page ${curPage - 1}</span>
           </button>
+
+          <span class="btn--inline pagination__btn--center
+            style="
+              font-weight: 700;
+              background-color: beige;
+              font-size: 20px;
+              margin: 0px auto;
+            "
+          >
+          ${curPage} page of ${numPages}</span>
       `;
     }
 
     // ceneter page
     if (curPage < numPages) {
       return `
+
+      
+
+
       <button data-goto="${
         curPage - 1
       }" class="btn--inline pagination__btn--prev">
@@ -63,6 +88,17 @@ class PageNavigationView extends view {
       </svg>
       <span> Page ${curPage - 1}</span>
     </button>
+    
+    <span class="btn--inline pagination__btn--center
+    style="
+      font-weight: 700;
+      background-color: beige;
+      font-size: 20px;
+      margin: 0px auto;
+    "
+  >
+  ${curPage} page of ${numPages}</span>
+
       <button data-goto="${
         curPage + 1
       }" class="btn--inline pagination__btn--next">
@@ -75,7 +111,15 @@ class PageNavigationView extends view {
     }
     // only one page
 
-    return "";
+    return `<span class="btn--inline pagination__btn--center
+    style="
+      font-weight: 700;
+      background-color: beige;
+      font-size: 20px;
+      margin: 0px auto;
+    "
+  >
+  ${curPage} page of ${numPages}</span>`;
   }
 }
 
